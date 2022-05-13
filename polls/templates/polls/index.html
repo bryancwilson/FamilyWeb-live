@@ -1,9 +1,0 @@
-{% if latest_question_list %} <!-- if there is questions in the latest_questions_list, a list that is included in the context variable defined in the views file, then execute the following code-->
-    <ul>
-    {% for question in latest_question_list %} <!-- for every question in the latest-question_list, execute the following code-->
-    <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li> <!-- print a link to the details url in the name of the current question in the latest_question_list-->
-    {% endfor %}
-    </ul>
-{% else %} <!-- if there are no questions in the latest_question_list then print no polls are available-->
-    <p>No polls are available.</p>
-{% endif %}

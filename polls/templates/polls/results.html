@@ -1,9 +1,0 @@
-<h1>{{ question.question_text }}</h1> <!-- Post the question that was asked as a heaader at the top-->
-
-<ul>
-{% for choice in question.choice_set.all %} <!-- iterate the following code for every choice in question.choice_set.all list-->
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li> <!-- List each choice as a bullet points and the amount of votes that it recieved-->
-{% endfor %}
-</ul>
-
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
