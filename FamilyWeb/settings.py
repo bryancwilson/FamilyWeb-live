@@ -83,19 +83,19 @@ WSGI_APPLICATION = 'FamilyWeb.wsgi.application'
 
 
 DATABASES = {
-    '''
     'default': {
+        '''
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'familymasterlist',
         'USER': 'root',
         'PASSWORD': 'Christopher21!',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-
+        '''
     }
 }
-'''
-}
+
+
 
 
 
