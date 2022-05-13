@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'agenda.apps.AgendaConfig',
     'contact.apps.ContactConfig',
     'registration.apps.RegistrationConfig',
-    'feedback.apps.FeedbackConfig',
-    'polls.apps.PollsConfig', #this tells django to include the polls app in the website
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
