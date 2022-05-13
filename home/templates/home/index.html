@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title> Home | Hyde Park Community Family Reunion </title>
+</head>
+<style>
+    
+    body {   
+        background-size: cover;
+        font-family: Calibri;
+    }
+
+    .top_of_page {
+        background-color: white;
+    }
+    
+    .WWW {
+        float: left;
+        width: 33.33%;
+        text-align: center;  
+        background-color: #f1f1f1;   
+    }
+
+    @media screen and (max-width: 600px) {
+        .WWW {
+          width: 100%;
+        }
+    }
+    .top_of_page_title {
+        background-color: #f1f1f1;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #1A5653;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd; /* Color of background button when hovered over */
+        color: black;   /* Color of text when hovered over*/
+    }
+
+    div.logo {
+        padding-top: 2%;
+        padding-left: 4%;
+        width: 40%;
+        float: left;
+    
+    }
+
+    img{
+        max-width: 70%;
+        height: auto;
+    }
+
+    .bigad {
+        float: right;
+        background-color: white;
+        height: 10%;
+        text-align: center;
+        padding-top: 3%; 
+        padding-right: 5%;
+        max-width: 50%;
+        margin-bottom: 20%;
+    }
+
+
+    .title_one{
+        font-size: 200%;
+    }
+
+    #slogan {
+        font-style: italic;
+        font-size: 130%;
+    }
+
+    .theme {
+        font-size: 130%;
+    }
+
+    #date {
+        font-size: 150%;
+    }
+
+    #hotel {
+        font-size: 130%;
+    }
+
+    #welcome {
+        font-size: 130%;
+    }
+
+    #contact {
+        font-size: 130%;
+    }
+
+    #bottom_of_page {
+        background-color: #1A5653; 
+        margin-top: 40%;
+        padding: 20px;
+        color: white;
+        padding-left: 3%;
+    }
+
+    #bottom_of_page a {
+        color: white;
+    }
+    
+</style>
+<body>
+
+    <div class='top_of_page'>
+        <div class='top_of_page_title'>
+            <p><br><br></p>
+        </div>
+        <div class="topnav">
+            <a class="active" href="/home">Home</a>
+            <a href="/contact">Welcome to Concord</a>
+            <a href="/agenda">Agenda</a>
+            <a href="/registration">Registration and Fees</a>
+        </div>
+    </div>
+
+    <div class="logo">  
+            {% load static %}
+            <img src="{% static 'home/hpcfrlogo.jpg' %}" alt="HPCFR Logo">
+    </div>
+
+    <div class='bigad'>
+        <h1 class='title_one'>Hyde Park Community Families Reunion 2023</h1>
+        
+        <p class="theme"><strong>Celebrating our Hyde Park commUNITY:<br>Engaging our Youth, Honoring our Elders, and Preserving our Legacy</strong></p>
+        <p id="slogan"><strong>"And over all these virtues put on love, which binds them together in perfect unity"(Colossians 3:14)</strong></p>
+        <p id="date"><strong>July 6 - July 9, 2023</strong></p>
+        <p id="hotel"><strong>Embassy Suites Charlotte-Concord Golf Resort and Spa</strong></p>
+        <p id="welcome"><strong>Looking forward to welcoming you to the Queen City!</strong></p>
+        <P id="contact">Reunion Agent: Dr. Yolanda Sheree' Wilson<br>Email: hpcfr2023@gmail.com<br>Address: P.O. Box 7191, Concord, NC 28027</p>
+          
+    </div>
+
+    <footer id="bottom_of_page">
+        <div id="useful_links">
+            <h4>Useful Links</h4>
+            <ul>
+                <li>Charlotte - <a href="https://charlottenc.gov/Pages/Home.aspx">https://charlottenc.gov/Pages/Home.aspx</a></li>
+                <li>Concord - <a href="https://concordnc.gov/">https://concordnc.gov/</a></li>
+                <li>Places to Eat - <a href="https://www.visitcabarrus.com/places-to-eat/">https://www.visitcabarrus.com/places-to-eat/</a> </li>
+                <li>Things to Do - <a href="https://www.visitcabarrus.com/things-to-do/">https://www.visitcabarrus.com/things-to-do/</a></li>
+                <li>Special Offers - <a href="https://www.visitcabarrus.com/special-offers/">https://www.visitcabarrus.com/special-offers/</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    
+    
+
+
+
+</body>
+</html>
