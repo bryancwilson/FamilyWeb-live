@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#heli2kf%@u7a7@8&0gsdg_&s^i$&5+qom5(74#x&a_6pnm)g_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['hpcfrfamilyreunion.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['hpcfrfamilyreunion.herokuapp.com','127.0.0.1', 'familyreunionwebsite-dev.us-east-1.elasticbeanstalk.com']
 
 
 # Application definition
