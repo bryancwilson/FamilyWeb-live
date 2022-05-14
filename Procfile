@@ -1,1 +1,0 @@
-web: gunicorn FamilyWeb.wsgi -- log-file -
