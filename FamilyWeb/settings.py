@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#heli2kf%@u7a7@8&0gsdg_&s^i$&5+qom5(74#x&a_6pnm)g_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hpcfrfamilyreunion.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -84,8 +84,14 @@ WSGI_APPLICATION = 'FamilyWeb.wsgi.application'
 
 DATABASES = {
     'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
+        
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'familymasterlist',
+        'USER': 'root',
+        'PASSWORD': 'Christopher21!',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        
     }
 }
 
