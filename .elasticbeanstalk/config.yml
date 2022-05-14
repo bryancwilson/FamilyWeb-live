@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: null
+    environment: FamilyReunionWebsite-dev
 global:
   application_name: FamilyReunionWebsite
   branch: null
