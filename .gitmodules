@@ -1,3 +1,0 @@
-[submodule "aws-elastic-beanstalk-cli-setup"]
-    path = aws-elastic-beanstalk-cli-setup
-    url = https://github.com/aws/aws-elastic-beanstalk-cli-setup.git
