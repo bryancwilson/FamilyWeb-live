@@ -4,6 +4,23 @@
     <meta name="viewport" content="width=device-width">
     <title> Registration | Hyde Park Community Family Reunion </title>
 </head>
+<!-- JavaScript Code-->
+<script>
+    function calculator() {
+        var child_input = document.getElementById("children_input").value;
+
+        var youth_input = document.getElementById("youth_input").value;
+      
+        var teenager_input = document.getElementById("teenager_input").value;
+      
+        var adult_input = document.getElementById("adult_input").value;
+        
+        var elders_input = document.getElementById("elders_input").value;
+      
+        document.getElementById("output") = child_input + youth_input + teenager_input + adult_input + elders_input;
+    }
+</script>
+<!-- CSS Code -->
 <style>
     
 
@@ -88,6 +105,41 @@
         font-size: 120%;
     }
 
+    .cost-header{
+        color: white;
+        text-align: center;
+        background-color: #1A5653; 
+        width: 75%;
+        padding: 2%;
+        padding-top: .5%;
+        padding-bottom: .5%;
+        margin-left: 10.9%;
+        margin-right: 10.9%;
+
+    }
+    .cost {
+        background-color: #f1f1f1;
+        padding: 2%;
+        padding-top: 1%;
+        width: 75%;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-left: 10.9%;
+        margin-right: 10.9%;
+        color: #1A5653;
+    }
+
+    .cost p{
+        font-size: 120%;
+    }
+
+    .cost output {
+        font-size: 150%;  
+    }
+
+    #total_p {
+        font-size: 150%;  
+    }
     .payment-header{
         color: white;
         text-align: center;
@@ -182,15 +234,14 @@
         color: white;
       }
 
-      .PayPal {
+      .CashApp {
         background-color: #f1f1f1;
         color: #1A5653;
         border: 2px solid #1A5653;
-        float: left;
-        margin-left: 30%;
+          
       }
 
-      .PayPal:hover {
+      .CashApp:hover {
         background-color: #1A5653;
         color: white;
       }
@@ -219,6 +270,18 @@
     #bottom_of_page a {
         color: white;
     }
+    
+    label {
+        
+        font-size: 125%;
+        
+    }
+
+    input {
+        border: 2px solid #1A5653;   
+        padding: 1%;
+    }
+
     
 </style>
 <body>
@@ -256,23 +319,74 @@
             </form>
     </div>
 
-    <div class="payment-header">
+    <div class="cost-header">
         <h2>Step 2</h2>
+    </div>
+
+    <div class="cost">
+        <h2>Cost Analysis Tool</h2>
+            <p>
+               If you are paying for multiple people, this tool will allow you to see your total cost. In the blanks below, 
+               please fill in the number of family members you are paying for according to their age range. If you are not paying for anyone
+               in a certain age range, put a 0 in the blank. 
+            </p>
+            <form oninput="res.value=(parseInt(children.value)*0) + (parseInt(youth.value)*50) + (parseInt(teenager.value)*75) + (parseInt(college.value)*135) + (parseInt(adult.value)*150) + (parseInt(elders.value)*75);" 
+            id="cost_form">
+                <label for="quantity">Children (Ages 4 and under):</label>
+                <br>
+                <input type="number" id="children_input" name="children" min="0" max="10">
+                <br>
+                <br>
+                <label for="quantity">Youth (Ages 5 - 12):</label>
+                <br>
+                <input type="number" id="youth_input" name="youth" min="0" max="10">
+                <br>
+                <br>
+                <label for="quantity">Teenager (Ages 13 - 17):</label>
+                <br>
+                <input type="number" id="teenager_input" name="teenager" min="0" max="10">
+                <br>
+                <br>
+                <label for="quantity">College Student (Enrolled in 12 credit hours or more in Fall 2023):</label>
+                <br>
+                <input type="number" id="college_input" name="college" min="0" max="10">
+                <br>
+                <br>
+                <label for="quantity">Adult (Ages 18 - 69):</label>
+                <br>
+                <input type="number" id="adult_input" name="adult" min="0" max="10">
+                <br>
+                <br>
+                <label for="quantity">Elders (Ages 70 and above)</label>
+                <br>
+                <input type="number" id="elders_input" name="elders" min="0" max="10">
+                <br>
+                <br>
+                <p id="total_p">Total Amount Due: $<output name="res"></output>.00</p>
+                
+            </form>
+            
+    </div>
+
+    <div class="payment-header">
+        <h2>Step 3</h2>
     </div>
 
     <div class="payment">
         <h2>Payment</h2>
             <p>
-                Click the buttons below to pay electronically using PayPal or Zelle.
+                Click the button below to pay electronically using CashApp.
             </p>
+            <!--
             <form method="get" action='https://www.paypal.com/us/home'>
                 <button class="button PayPal">PayPal</button>
             </form>
-            <form method="get" action=''>
-                <button class="button Zelle">Zelle</button>
+            -->
+            <form method="get" action='https://cash.app/'>
+                <button class="button CashApp">CashApp</button>
             </form>
             <p>
-                **Please contact your local bank about making a Zelle money transfer to hpcfr2023@gmail.com
+                **If you do not already have a CashApp account, you will need to create one before you are able to pay.
             </p>
             <h3>Or...</h3>
             <p>
@@ -285,7 +399,7 @@
     </div>
 
     <div class="hotel-header">
-        <h2>Step 3</h2>
+        <h2>Step 4</h2>
     </div>
 
     <div class="hotel">
